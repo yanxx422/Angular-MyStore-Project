@@ -1,7 +1,9 @@
 # MyStoreApp
 
-MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
+MyStore is an Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 This project was generated with Angular CLI version 13.2.6.
+
+## Demo
 
 ![MyStore shopping flow](shoppingflow.gif)
 
@@ -24,3 +26,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+This is the third project of Udacity's full-stack Javascript Nanodegree, the instructions can be found here: https://github.com/udacity/nd-0067-c3-angular-fundamentals-project-starter
