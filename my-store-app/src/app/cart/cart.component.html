@@ -1,0 +1,34 @@
+<div class = "empty-cart-message" *ngIf="cartList.length === 0">Your Cart is Empty!<br>Go back and add some items!</div>
+<div class = "cart-container">
+  <div class = "cart-panel" >
+    <div class = "cart-item" *ngFor = "let product of cartList">
+      <img src={{product.url}}>
+      <div class ="cart-item-details">
+        <p>{{product.name}}</p>
+        <p>${{product.price}}</p>
+        <p>Amount: {{product.quantity}}</p>
+      </div>
+    </div>
+    <p *ngIf="cartList.length != 0"> Total: ${{userInfo.totalPrice}}</p>
+
+
+
+  </div>
+  <div class = "form-margin" *ngIf="cartList.length != 0">
+    <form #form="ngForm">
+      <p>Full name</p>
+      <input type="text" name="Full Name" required minlength = "3" maxlength = "100" placeholder="(minimum 3 characters)" [(ngModel)]="userInfo.fullName">
+      <br>
+      <p>Address</p>
+      <input type="text" name="Address" required minlength = "6" maxlength = "300" placeholder="(minimum 6 characters)" [(ngModel)]="userInfo.address">
+      <br>
+      <p>Credit card number</p>
+      <input type="text" name="Credit Card Number" required minlength = "16" maxlength = "16" placeholder="(16-digit-number)" [(ngModel)]=userInfo.creditCard>
+      <br>
+      <br>
+      <input type="submit" class ="btn btn-primary" value = "Submit" [disabled]="form.invalid" (click)="send(userInfo)" routerLink="/confirmation">
+    </form>
+
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.confirmation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+}
+
+.confirmation-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-summary{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  width: 450px;
+  background-color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+table, th, td {
+  border:1px solid black;
+  text-align:center;
+  margin: 5px;
+}
+
+
+.confirmation-header {
+  color: #33e5bc;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.confirmation-item {
+  margin-bottom: 30px;
+}

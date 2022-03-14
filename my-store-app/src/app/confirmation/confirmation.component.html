@@ -1,0 +1,28 @@
+<div class = "confirmation-items"  *ngIf="userInfo != undefined">
+  <p class = "confirmation-header"> Success! 🎉</p>
+  <p> Thank you! {{userInfo.fullName}}</p>
+  <p> Your order is confirmed!</p>
+  <p> Your total Price is ${{userInfo.totalPrice}}.</p>
+  <p> Here is the summary of your order:</p>
+  <table>
+    <thead>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Subtotal Price</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of userInfo.orderDetails">
+      <td>{{product.name}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{product.price}}</td>
+      <td>${{product.price * product.quantity}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <p> Please allow 1-3 business day(s) for shipping.</p>
+  <button class="btn btn-primary"  routerLink ="/" style="margin-right:10px; width: 150px;height: 35px">Back to product list</button>
+
+</div>
+
