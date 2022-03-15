@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { CartService } from '../services/cart.service'
 import { UserService } from '../services/user.service'
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -20,7 +21,6 @@ export class CartComponent implements OnInit {
       orderDetails : []
     }
   }
-
   ngOnInit(): void {
     this.cartList = this.cartService.getCart();
     this.userInfo.totalPrice = this.cartList.reduce(function(acc,curr) {
@@ -34,5 +34,19 @@ export class CartComponent implements OnInit {
     this.cartList = [];
     this.cartService.clearCart();
   }
+
+  fullNameChanged(value:string){
+    console.log(value)
+    this.userInfo.fullName = value;
+  }
+
+  addressChanged(value:string){
+    this.userInfo.address = value;
+  }
+
+  creditCardChanged(value:string){
+    this.userInfo.creditCard = value;
+  }
+
 
 }

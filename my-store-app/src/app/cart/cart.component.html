@@ -9,6 +9,7 @@
         <p>Amount: {{product.quantity}}</p>
       </div>
     </div>
+
     <p *ngIf="cartList.length != 0"> Total: ${{userInfo.totalPrice}}</p>
 
 
@@ -17,18 +18,16 @@
   <div class = "form-margin" *ngIf="cartList.length != 0">
     <form #form="ngForm">
       <p>Full name</p>
-      <input type="text" name="Full Name" required minlength = "3" maxlength = "100" placeholder="(minimum 3 characters)" [(ngModel)]="userInfo.fullName">
+      <input type="text" name="Full Name" required minlength = "3" maxlength = "100" placeholder="(minimum 3 characters)" [(ngModel)]="userInfo.fullName" (ngModelChange)="fullNameChanged($event)">
       <br>
       <p>Address</p>
-      <input type="text" name="Address" required minlength = "6" maxlength = "300" placeholder="(minimum 6 characters)" [(ngModel)]="userInfo.address">
+      <input type="text" name="Address" required minlength = "6" maxlength = "300" placeholder="(minimum 6 characters)" [(ngModel)]="userInfo.address"(ngModelChange)="addressChanged($event)">
       <br>
       <p>Credit card number</p>
-      <input type="text" name="Credit Card Number" required minlength = "16" maxlength = "16" placeholder="(16-digit-number)" [(ngModel)]=userInfo.creditCard>
+      <input type="text" pattern="[0-9]+" name="Credit Card Number" required minlength = "16" maxlength = "16" placeholder="(16-digit-number)" [(ngModel)]=userInfo.creditCard (ngModelChange)="creditCardChanged($event)">
       <br>
       <br>
       <input type="submit" class ="btn btn-primary" value = "Submit" [disabled]="form.invalid" (click)="send(userInfo)" routerLink="/confirmation">
     </form>
-
-
   </div>
 </div>

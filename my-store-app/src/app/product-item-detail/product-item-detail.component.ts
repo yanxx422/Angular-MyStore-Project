@@ -35,5 +35,10 @@ export class ProductItemDetailComponent implements OnInit {
     this.cartService.addToCart(this.product,this.product_quantity)
     alert("Added to cart! ")
   }
+  delete(product:Product){
+    this.cartService.deleteFromCart(product);
+  }
+
+
 
 }

@@ -23,6 +23,11 @@ export class CartService {
 
     return this.cartList;
   }
+
+  deleteFromCart(product:any){
+    this.cartList = this.cartList.filter((x: { name: any; }) => x.name != product.name)
+    return this.cartList;
+  }
   clearCart(){
     this.cartList = []
     return this.cartList
