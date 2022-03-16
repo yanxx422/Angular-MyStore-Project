@@ -17,7 +17,7 @@ This application reflects the same user experience as that of a real-world e-com
 ![MyStore shopping flow](shoppingflow.gif)
 
 # Getting Started
-
+Navigate to `my-store-app` folder.
 
 ## Development server
 
