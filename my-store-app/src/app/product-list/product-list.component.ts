@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   }
   deleteThis(product:any):void{
     this.cartService.deleteFromCart(product)
-    alert("Product Removed! ")
+
 
   }
 }

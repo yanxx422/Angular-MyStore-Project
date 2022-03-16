@@ -47,6 +47,4 @@ export class CartComponent implements OnInit {
   creditCardChanged(value:string){
     this.userInfo.creditCard = value;
   }
-
-
 }

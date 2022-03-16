@@ -26,6 +26,7 @@ export class CartService {
 
   deleteFromCart(product:any){
     this.cartList = this.cartList.filter((x: { name: any; }) => x.name != product.name)
+    alert("Product Removed! ")
     return this.cartList;
   }
   clearCart(){
